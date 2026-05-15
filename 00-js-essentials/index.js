@@ -1,3 +1,6 @@
+"use strict";
+
+/*
 console.log("Hello, World!");
 console.log("Welcome to JS Essentials");
 console.log("JS is Fun!...");
@@ -29,3 +32,34 @@ console.log(Boolean(""));
 
 console.log(1000 > 2000 < 1);
 console.log(true >= 1);
+
+console.log("Welcome to another session about JS");
+
+console.log("--- VARIABLES IN JS");
+
+var myName = "Logesh";
+myName = "LOGESHWARAN";
+
+console.log("Here I'm " + myName);
+
+// scope: accessibility of varibles saying where it can be used or not
+// BLOCK SCOPE GLOBAL SCOPE FUNCTIONAL SCOPE
+
+let myCity = "Pondicherry";
+myCity = "Pondy";
+
+console.log(myCity);
+
+const myCollegeName = "CIT";
+console.log(myCollegeName);
+
+if (true) {
+    let myName = "LOGESH";
+}
+console.log(myName);
+
+*/
+
+myName = "LOGESH";
+
+console.log(myName);
