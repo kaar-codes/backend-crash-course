@@ -149,29 +149,129 @@ console.log(myName);
 //   console.log("ABCDEFGHIJKLMNOPQRSTUVWXYZ ".indexOf(element));
 // }
 
-// TODO --
+// const myExampleArr = [100, 200, 301, 440];
+// console.log(typeof myExampleArr);
+// console.dir(myExampleArr);
+// console.dir(new String("LOGESH"));
+// console.dir(new Number(100));
 
+// ARRAY Functions
+// const arr = [100, 201, 301, 560];
+
+// console.log(arr.at(2));
+// console.log(arr.concat(45));
+// console.log(arr.push(45));
+// console.log(arr.pop());
+// console.log(arr.unshift(1000));
+// console.log(arr.shift());
+// console.log(arr);
+
+// const res = arr.find((val, index, obj) => val == 201);
+// console.log(res);
+
+// const resIndex = arr.findIndex((val, index, obj) => val == 201);
+// console.log(resIndex);
+
+// const resFilter = arr.filter((val) => val >= 300);
+// console.log(resFilter);
+
+// const resSlice = arr.slice(-2, -1);
+// console.log(resSlice);
+// console.log(arr);
+
+// const resSplice = arr.splice(-2, 1);
+// console.log(resSplice);
+// console.log(arr);
+
+// console.log(
+//   [
+//     [100, [200, 400]],
+//     [123, 456],
+//   ].flat(2),
+// );
+
+// const arr2 = [1900, 1800];
+
+// const resJoin = arr.join("-- JOIN --");
+// console.log(resJoin);
+// console.log(arr);
+
+// console.log("Hello I am Logesh".split("").filter((val) => val !== " "));
+
+// console.log(arr.some((val) => val == 1000));
+
+// console.log(
+//   ["LOGESH", "HILARY", "ABDUL"].forEach((val, ind, arr) => {
+//     console.log("User name is " + val);
+//     return "USER NAME IS " + val;
+//   }),
+// );
+
+// console.log(
+//   ["LOGESH", "HILARY", "ABDUL"].map((val, ind, arr) => {
+//     console.log("User name is " + val);
+//     return "USER NAME IS " + val;
+//   }),
+// );
+
+// TO REDO:
+// const sortArr = [1, -1, 100, 10]; // 0 -99 110 11
+// console.log(sortArr);
+// console.log(
+//   sortArr.toSorted((a, b) => {
+//     return a + b;
+//   }),
+// );
+// -1 Asce 0 Remain same 1 Do Descen
+
+// console.log(Math.trunc(Math.random() * 10) + 1);
+
+// TODO --
+// HANGMAN
 // 1. Pick a Random Value
 // 2. Show - instead of each characters
 // 3. Ask the user to choose any letter
 // 4. Once he chooses check for the letter in the word
 // 5. If it is there and you have remaining lives replace that letter or Lose 1 lives till the game gets over.
 
-const qWord = "APPLE";
-let qWordHash = "";
-for (const key in qWord) {
-  qWordHash += "-";
-}
-console.log(qWordHash);
-let choice = prompt("Enter the Choice").toUpperCase();
-console.log(`You've have chosen ${choice}`);
+const qWords = [
+  "ANIMAL",
+  "HELICOPTER",
+  "AEROPLANE",
+  "KEYBOARD",
+  "MOUSE",
+  "MONITOR",
+  "GIRAFEE",
+];
 
-for (const [index, expectedLetter] of Object.entries(qWord)) {
-  if (expectedLetter == choice) {
-    console.log("You are right!");
-    const qWordSplitted = qWordHash.split();
-    qWordSplitted[index] = choice;
-    console.log(qWordSplitted);
-    qWordHash = qWordSplitted.join();
+let LIVES = 6;
+const randomIndex = Math.trunc(Math.random() * qWords.length);
+const selectedWord = qWords.at(randomIndex);
+
+const maskedQword = selectedWord.split("");
+
+// MASKING DEPENDS ON THE LENGTH 30% should always be there 10 -> Minimum 3 letters should be hidden
+for (const _ in maskedQword) {
+  const index = Math.trunc(Math.random() * qWords.length) - 1;
+  maskedQword[index] = "_";
+}
+console.log(maskedQword.join(" "));
+
+while (maskedQword.includes("_")) {
+  const inputString = prompt("Enter your choice: ");
+  if (selectedWord.includes(inputString)) {
+    for (const [index, letter] of Object.entries(selectedWord)) {
+      if (letter == inputString) {
+        maskedQword[index] = inputString;
+        console.log(maskedQword.join(" "));
+      }
+    }
+  } else {
+    LIVES--;
+    if (LIVES) {
+      alert("You have losed 1 live!");
+    } else {
+      alert("GAME OVER!");
+    }
   }
 }
