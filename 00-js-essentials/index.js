@@ -234,44 +234,57 @@ console.log(myName);
 // 4. Once he chooses check for the letter in the word
 // 5. If it is there and you have remaining lives replace that letter or Lose 1 lives till the game gets over.
 
-const qWords = [
-  "ANIMAL",
-  "HELICOPTER",
-  "AEROPLANE",
-  "KEYBOARD",
-  "MOUSE",
-  "MONITOR",
-  "GIRAFEE",
-];
+// const qWords = [
+//   "ANIMAL",
+//   "HELICOPTER",
+//   "AEROPLANE",
+//   "KEYBOARD",
+//   "MOUSE",
+//   "MONITOR",
+//   "GIRAFEE",
+// ];
 
-let LIVES = 6;
-const randomIndex = Math.trunc(Math.random() * qWords.length);
-const selectedWord = qWords.at(randomIndex);
+// let lives = 6;
+// const randomIndex = Math.trunc(Math.random() * 10);
 
-const maskedQword = selectedWord.split("");
+// const selectedWord = qWords[randomIndex];
 
-// MASKING DEPENDS ON THE LENGTH 30% should always be there 10 -> Minimum 3 letters should be hidden
-for (const _ in maskedQword) {
-  const index = Math.trunc(Math.random() * qWords.length) - 1;
-  maskedQword[index] = "_";
-}
-console.log(maskedQword.join(" "));
+// const maskedQword = selectedWord.split("");
 
-while (maskedQword.includes("_")) {
-  const inputString = prompt("Enter your choice: ");
-  if (selectedWord.includes(inputString)) {
-    for (const [index, letter] of Object.entries(selectedWord)) {
-      if (letter == inputString) {
-        maskedQword[index] = inputString;
-        console.log(maskedQword.join(" "));
-      }
-    }
-  } else {
-    LIVES--;
-    if (LIVES) {
-      alert("You have losed 1 live!");
-    } else {
-      alert("GAME OVER!");
-    }
-  }
-}
+// // ELIMINATING ALL THE CHARACTERS
+// for (let i = 0; i < selectedWord.length; i++) {
+//   const index = Math.trunc(Math.random() * qWords.length) - 1;
+//   maskedQword[index] = "_";
+// }
+
+// console.log(maskedQword.join(" "));
+
+// while (maskedQword.includes("_") && lives) {
+//   const input = prompt("Character Input: ");
+//   if (selectedWord.split("").includes(input)) {
+//     //  REPLACE _ with the respected input
+//     for (const [ind, val] of Object.entries(selectedWord.split(""))) {
+//       if (val == input) {
+//         maskedQword[ind] = val;
+//         console.log(maskedQword.join(" "));
+//       }
+//     }
+//   } else {
+//     lives--;
+//     if (lives) {
+//       alert("You have lost 1 life");
+//     } else {
+//       alert("GAME OVER!");
+//     }
+//   }
+// }
+
+const arr = ["LOGESH", "VIGNESH", "HILARY", "ABDUL"];
+const inp = prompt("Which index do you want to print?");
+// if (inp < arr.length && typeof input != NaN) {
+//   console.log(arr[inp]);
+// } else console.log("Not a Valid Input")
+
+console.log(
+  inp < arr.length && typeof inp != NaN ? arr[inp] : "Not a Valid Input",
+);
