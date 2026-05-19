@@ -280,11 +280,50 @@ console.log(myName);
 // }
 
 const arr = ["LOGESH", "VIGNESH", "HILARY", "ABDUL"];
-const inp = prompt("Which index do you want to print?");
+// const inp = prompt("Which index do you want to print?");
 // if (inp < arr.length && typeof input != NaN) {
 //   console.log(arr[inp]);
 // } else console.log("Not a Valid Input")
 
-console.log(
-  inp < arr.length && typeof inp != NaN ? arr[inp] : "Not a Valid Input",
-);
+// console.log(
+//   inp < arr.length && typeof inp != NaN ? arr[inp] : "Not a Valid Input",
+// );
+
+// const ind = prompt("VALUE OF INDEX");
+// ind < arr.length
+//   ? console.log(arr[ind])
+//   : console.log("It is higher than the length of the array");
+// var ind = prompt("Enter the INDEX VALUE: ");
+// console.log(arr[ind < arr.length ? ind : 0]);
+
+// FUNCTIONS
+// 4 types: Regular fn, Expression fn, Arrow fn, IIFE (immediately invoked function)
+
+// Pascal Casing - PascalCasing
+// Camel Casing -  camelCasing
+// Snake Casing - snake_case
+
+// const firstInstance = getPersonNickName("Logesh");
+// getPersonNickName("Vignesh");
+
+// function getPersonNickName(personName) {
+//   const nickNames = ["Vanguard", "JoJo Rabbit", "Mazer"];
+//   return nickNames[Math.trunc(Math.random() * nickNames.length)] + personName;
+// }
+
+// AGE CALCULATOR
+// Get the users birth year
+// function calcAge(userBirthYear = prompt("User birth year is")) {
+//   return 2026 - userBirthYear;
+// }
+
+// EXPRESSION FUNCTION
+// const calcAge = function (userBirthYear = prompt("User birth year is")) {
+//   return 2026 - userBirthYear;
+// };
+
+// ARROW FUNCTION
+// const calcAge = (userBirthYear = prompt("User birth year is")) =>
+//   2026 - userBirthYear;
+
+// console.log("AGE OF THE PERSON IS " + calcAge());
