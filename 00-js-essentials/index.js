@@ -279,7 +279,7 @@ console.log(myName);
 //   }
 // }
 
-const arr = ["LOGESH", "VIGNESH", "HILARY", "ABDUL"];
+// const arr = ["LOGESH", "VIGNESH", "HILARY", "ABDUL"];
 // const inp = prompt("Which index do you want to print?");
 // if (inp < arr.length && typeof input != NaN) {
 //   console.log(arr[inp]);
@@ -327,3 +327,53 @@ const arr = ["LOGESH", "VIGNESH", "HILARY", "ABDUL"];
 //   2026 - userBirthYear;
 
 // console.log("AGE OF THE PERSON IS " + calcAge());
+
+// HOISTING TDZ [Temporal Dead Zone]
+// console.log(myName);
+
+// const myName = 123;
+
+// helloFn();
+
+// const helloFn = () => {
+//   console.log("Hey! and Hello Everyone!...");
+// };
+
+// First Class function
+// function calcBMI(wgt, hgt) {
+//   let bmi = wgt / hgt ** 2;
+//   return function () {
+//     console.log(`Your bmi is ${bmi}`);
+//   };
+// }
+
+// calcBMI(55, 1.56)();
+
+// console.log(new Number("123") === Number("123"));
+// console.log(typeof new Number("123
+// console.log(typeof Number("123"));
+// function exampleFn() {
+// if (true) {
+//   const myExample = "ASDF:LKJ";
+// }
+// console.log(myExample);
+// }
+
+// function exampleParentFn() {
+//   exampleFn();
+//   if (true) {
+//     function exampleFn() {
+//       console.log("Hey! there");
+//       var age = 100;
+//       console.log(age);
+//     }
+//   }
+// }
+// exampleParentFn();
+
+// const interface = "Hey There";
+
+// --- EXECUTION CONTEXT
+// Variable Environment : Global / Functional / Evaluation
+// Scope
+// this keyword
