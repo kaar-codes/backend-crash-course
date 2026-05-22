@@ -377,3 +377,37 @@ console.log(myName);
 // Variable Environment : Global / Functional / Evaluation
 // Scope
 // this keyword
+
+// OPERATORS
+// + - * / % **
+// = += -= *= /=
+// == === != !== < > <= >= && || ! ?? ?.
+// typeof
+// () GROUPING
+//
+// const obj = {
+//   personName: "Logesh",
+//   job: "Instructor",
+// };
+
+// console.log("job" in obj);
+
+// console.log("1" != 1);
+
+console.log(true && true && true); // This will look for TRUE, if so it will go further
+
+console.log(true || false || false); // This will look for FALSE, if so it will go further
+
+console.log(null ?? "Hey Everyone" ?? undefined); // This will look for null / undefined, if so it will go further
+
+// class MyExampleInstance() {
+// }
+
+// const obj = new MyExampleInstance();
+
+// console.log(obj instanceof MyExampleInstance);
+
+const arr = [123, 345, 567];
+
+// const [a, b, c, ...arr2] = [100, 200, 300, [120, 300]];
+// console.log(arr2);
