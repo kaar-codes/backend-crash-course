@@ -394,11 +394,11 @@ console.log(myName);
 
 // console.log("1" != 1);
 
-console.log(true && true && true); // This will look for TRUE, if so it will go further
+// console.log(true && true && true); // This will look for TRUE, if so it will go further
 
-console.log(true || false || false); // This will look for FALSE, if so it will go further
+// console.log(true || false || false); // This will look for FALSE, if so it will go further
 
-console.log(null ?? "Hey Everyone" ?? undefined); // This will look for null / undefined, if so it will go further
+// console.log(null ?? "Hey Everyone" ?? undefined); // This will look for null / undefined, if so it will go further
 
 // class MyExampleInstance() {
 // }
@@ -407,7 +407,83 @@ console.log(null ?? "Hey Everyone" ?? undefined); // This will look for null / u
 
 // console.log(obj instanceof MyExampleInstance);
 
-const arr = [123, 345, 567];
+// const arr = [123, 345, 567];
 
 // const [a, b, c, ...arr2] = [100, 200, 300, [120, 300]];
 // console.log(arr2);
+
+// Asynchronous Functions
+// async function exampleFn() {
+//   try {
+//     const baseURL = "https://dog.ceoapi/breeds/image/random"; // Promises
+//     const response = await fetch(baseURL);
+//     console.log(response);
+//   } catch {
+//     console.log("Error Occured");
+//   }
+// }
+// exampleFn();
+
+// OBJECT ORIENTED PROGRAMMING IN JS
+// CLASS OBJECTS
+// class Car {
+//   // Members
+//   wheels;
+//   steering;
+//   pedals;
+//   radio;
+
+//   constructor(wheels, steering, pedals, radio) {
+//     this.wheels = wheels;
+//   }
+
+//   // Methods
+//   moveForward() {
+//     console.log(`${this.wheels} are the number of wheels a car has`);
+//     console.log("Moving Forward");
+//   }
+// }
+
+// const carObj = new Car(4, true, true, true);
+// const carObj2 = new Car(2, true, true, true);
+
+// carObj2.moveForward();
+
+const obj = {
+  birthYear: 2000,
+  calcAge: function () {
+    console.log(this);
+    console.log(2026 - this.birthYear);
+  },
+};
+const obj2 = {
+  birthYear: 1999,
+  calcAge: function () {
+    console.log(this);
+    console.log(2026 - this.birthYear);
+  },
+};
+
+obj.calcAge();
+
+// obj.calcAge();
+
+// console.log(this);
+
+// let a = 100;
+// JS Engine - Call Stack, Heap [A program JS code into Machine Level Code Execution]
+
+// const job = "Instructor";
+
+// function greet() {
+//   const name = "Logesh";
+//   console.log("Hello , " + name);
+// }
+
+// greet();
+
+// let myCity = (city) => {
+//   return "I'm from " + city;
+// };
+
+// const result = myCity("Pondicherry");
