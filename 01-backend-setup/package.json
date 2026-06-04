@@ -1,0 +1,12 @@
+{
+  "name": "express-node-setup",
+  "description": "backend setup using Express and Node JS",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
