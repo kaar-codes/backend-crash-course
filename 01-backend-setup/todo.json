@@ -1,1 +1,27 @@
-[{ "id": "001", "assignee": "Logesh", "task": "Task for making Slides" }]
+[
+  {
+    "id": "001",
+    "assignee": "Logesh",
+    "task": "Task for making Slides for Online classes"
+  },
+  {
+    "id": "002",
+    "assignee": "Vignesh",
+    "task": "Automation flow for E2E for Enterprise"
+  },
+  {
+    "id": "003",
+    "assignee": "Hilary",
+    "task": "Business model explanation and design"
+  },
+  {
+    "id": "004",
+    "assignee": "Abdul",
+    "task": "Writing REST API documentation"
+  },
+  {
+    "id": "005",
+    "assignee": "Gautham",
+    "task": "Writing GRAPH QL API documentation"
+  }
+]
