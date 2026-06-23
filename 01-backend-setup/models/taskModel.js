@@ -4,6 +4,10 @@ const taskSchema = new Schema(
   {
     taskMaster: String,
     description: String,
+    status: {
+      type: String,
+      enum: ["In Progress", "Backlog", "In Testing", "Done", "Waiting for Fix"],
+    },
   },
   {
     versionKey: false,

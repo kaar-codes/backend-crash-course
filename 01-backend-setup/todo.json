@@ -2,7 +2,8 @@
   {
     "id": "001",
     "assignee": "Logesh",
-    "task": "Task for making Slides for Online classes"
+    "task": "Task for making Slides for Online classes",
+    "status": "In Progress" || "Backlog" || "In Testing" || "Done" || "Waiting for Fix"
   },
   {
     "id": "002",
